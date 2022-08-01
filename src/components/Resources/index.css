@@ -1,0 +1,79 @@
+.pageBackground {
+  width: 1440px;
+  background-color: #f5f5f5;
+  background-size: cover;
+}
+.tabNames {
+  position: absolute;
+  left: 29.17%;
+  right: 29.17%;
+  top: 15.52%;
+  bottom: 84.57%;
+  width: 600px;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+}
+
+.resourcesButton {
+  background: #0b69ff;
+  border: 1px solid #d7dfe9;
+  font-family: "HK Grotesk";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+  color: #ffffff;
+  width: 200px;
+  height: 40px;
+}
+.otherButton {
+  background: rgba(215, 223, 233, 0.24);
+  border: 1px solid #d7dfe9;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+  color: #171f46;
+  width: 200px;
+  height: 40px;
+}
+
+.searchImage1 {
+  background-color: #ffffff;
+}
+
+.searchBox {
+  position: absolute;
+  left: 10.35%;
+  right: 44.65%;
+  top: 25.55%;
+  height: 35px;
+  width: 648px;
+  border: 1px solid #d7dfe9;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 10px;
+  border-radius: 3px;
+}
+.searchInput {
+  margin-left: 15px;
+  border-style: hidden;
+  height: 34px;
+  width: 630px;
+}
+
+.elementsContainer {
+  position: absolute;
+  left: 7.28%;
+  margin-left: 0px;
+  top: 32.59%;
+  background-color: #f5f5f5;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  list-style: none;
+}

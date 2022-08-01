@@ -1,0 +1,60 @@
+.headBackground {
+  background: #ffffff;
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 92.97%;
+  height: 72px;
+  width: 1440px;
+  display: flex;
+  flex-direction: row;
+}
+.logoNxtwave {
+  width: 82px;
+  height: 40px;
+
+  left: 3.33%;
+  right: 90.97%;
+  top: 1.56%;
+  bottom: 94.53%;
+  margin-top: 16px;
+}
+
+.innerContainer {
+  display: flex;
+  flex-direction: row;
+  margin-left: 1120px;
+}
+.addButtonContainer {
+  position: absolute;
+  left: 82.88%;
+  right: 6.67%;
+  top: 1.37%;
+  bottom: 94.73%;
+}
+.logoContainer {
+  position: absolute;
+  left: 3.33%;
+  right: 90.97%;
+  top: 1.56%;
+  bottom: 94.53%;
+}
+
+.userImage {
+  border-radius: 50px;
+  margin: 10px;
+}
+.userImageContainer {
+  position: absolute;
+  left: 92.88%;
+  right: 6.67%;
+  top: 1.37%;
+  bottom: 94.73%;
+}
+.addButton1 {
+  margin: 8px;
+  margin-top: 10px;
+  border: 0px;
+  background-color: #ffffff;
+}
