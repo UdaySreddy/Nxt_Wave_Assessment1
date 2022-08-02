@@ -1,8 +1,10 @@
 import "./App.css";
+
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import Home from "./components/Home";
+
 import LoginForm from "./components/LoginForm";
-import AddResource from "./components/AddResource";
+import Resources from "./components/Resources";
+import Resources2 from "./components/Resources2";
 import Header1 from "./components/Header1";
 
 function App() {
@@ -11,8 +13,8 @@ function App() {
       <Header1 />
       <Switch>
         <Route exact path="/" component={LoginForm} />
-        <Route exact path="/home" component={Home} />
-        <Route exact path="/addresource" component={AddResource} />
+        <Route exact path="/home" component={Resources} />
+        <Route exact path="/additem" component={Resources2} />
       </Switch>
     </BrowserRouter>
   );

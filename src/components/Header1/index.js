@@ -25,7 +25,7 @@ class Header1 extends Component {
 
         <div className="addButtonContainer">
           {showAddButton && (
-            <Link to="/addresource">
+            <Link to="/additem">
               <button
                 className="addButton1"
                 type="button"

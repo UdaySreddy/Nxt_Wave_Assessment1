@@ -1,39 +1,39 @@
-import {Component} from 'react'
-import Home from '../Home'
-import {Link} from 'react-router-dom'
-import './index.css'
-import {ToastContainer, toast} from 'react-toastify'
-import 'react-toastify/dist/ReactToastify.css'
+import { Component } from "react";
+import Resources from "../Resources";
+
+import "./index.css";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 class LoginForm extends Component {
   state = {
-    firstNameInput: '',
-    lastNameInput: '',
+    firstNameInput: "",
+    lastNameInput: "",
     showFirstNameError: false,
     showLastNameError: false,
     isFormSubmitted: false,
-  }
+  };
 
   onBlurLastName = () => {
-    const isValidLastName = this.validateLastName()
+    const isValidLastName = this.validateLastName();
 
-    this.setState({showLastNameError: !isValidLastName})
-  }
+    this.setState({ showLastNameError: !isValidLastName });
+  };
 
-  onChangeLastName = event => {
-    const {target} = event
-    const {value} = target
+  onChangeLastName = (event) => {
+    const { target } = event;
+    const { value } = target;
 
     this.setState({
       lastNameInput: value,
-    })
-  }
+    });
+  };
 
   renderLastNameField = () => {
-    const {lastNameInput, showLastNameError} = this.state
+    const { lastNameInput, showLastNameError } = this.state;
     const className = showLastNameError
-      ? 'name-input-field error-field'
-      : 'name-input-field'
+      ? "name-input-field error-field"
+      : "name-input-field";
 
     return (
       <div className="input-container">
@@ -50,29 +50,29 @@ class LoginForm extends Component {
           onBlur={this.onBlurLastName}
         />
       </div>
-    )
-  }
+    );
+  };
 
   onBlurFirstName = () => {
-    const isValidFirstName = this.validateFirstName()
+    const isValidFirstName = this.validateFirstName();
 
-    this.setState({showFirstNameError: !isValidFirstName})
-  }
+    this.setState({ showFirstNameError: !isValidFirstName });
+  };
 
-  onChangeFirstName = event => {
-    const {target} = event
-    const {value} = target
+  onChangeFirstName = (event) => {
+    const { target } = event;
+    const { value } = target;
 
     this.setState({
       firstNameInput: value,
-    })
-  }
+    });
+  };
 
   renderFirstNameField = () => {
-    const {firstNameInput, showFirstNameError} = this.state
+    const { firstNameInput, showFirstNameError } = this.state;
     const className = showFirstNameError
-      ? 'name-input-field error-field'
-      : 'name-input-field'
+      ? "name-input-field error-field"
+      : "name-input-field";
 
     return (
       <div className="input-container">
@@ -90,41 +90,41 @@ class LoginForm extends Component {
         />
         <ToastContainer />
       </div>
-    )
-  }
+    );
+  };
 
   validateLastName = () => {
-    const {lastNameInput} = this.state
+    const { lastNameInput } = this.state;
 
-    return lastNameInput !== ''
-  }
+    return lastNameInput !== "";
+  };
 
   validateFirstName = () => {
-    const {firstNameInput} = this.state
+    const { firstNameInput } = this.state;
 
-    return firstNameInput !== ''
-  }
+    return firstNameInput !== "";
+  };
 
-  onSubmitForm = event => {
-    event.preventDefault()
-    const isValidFirstName = this.validateFirstName()
-    const isValidLastName = this.validateLastName()
+  onSubmitForm = (event) => {
+    event.preventDefault();
+    const isValidFirstName = this.validateFirstName();
+    const isValidLastName = this.validateLastName();
 
     if (isValidFirstName && isValidLastName) {
-      this.setState({isFormSubmitted: true})
-      toast.success('submitted')
+      this.setState({ isFormSubmitted: true });
+      toast.success("submitted");
     } else {
       this.setState({
         showFirstNameError: !isValidFirstName,
         showLastNameError: !isValidLastName,
         isFormSubmitted: false,
-      })
-      toast.error('error in submition')
+      });
+      toast.error("error in submition");
     }
-  }
+  };
 
   renderRegistrationForm = () => {
-    const {showFirstNameError, showLastNameError} = this.state
+    const { showFirstNameError, showLastNameError } = this.state;
 
     return (
       <form className="form-container" onSubmit={this.onSubmitForm}>
@@ -136,17 +136,13 @@ class LoginForm extends Component {
           Submit
         </button>
       </form>
-    )
-  }
+    );
+  };
 
-  renderSubmissionSuccessView = () => (
-    <Link to="/home">
-      <Home />
-    </Link>
-  )
+  renderSubmissionSuccessView = () => <Resources />;
 
   render() {
-    const {isFormSubmitted} = this.state
+    const { isFormSubmitted } = this.state;
 
     return (
       <div className="registration-form-container">
@@ -157,8 +153,8 @@ class LoginForm extends Component {
             : this.renderRegistrationForm()}
         </div>
       </div>
-    )
+    );
   }
 }
 
-export default LoginForm
+export default LoginForm;

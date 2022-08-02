@@ -70,7 +70,7 @@ class Resources2 extends Component {
 
   render() {
     return (
-      <form className="pageBackground" onClick={this.prevent}>
+      <div className="pageBackground" onClick={this.prevent}>
         toast.info("you are redirected")
         <Link to="/home">
           <button type="button" className="usersButton">
@@ -115,7 +115,7 @@ class Resources2 extends Component {
           </div>
         </form>
         <ToastContainer />
-      </form>
+      </div>
     );
   }
 }
